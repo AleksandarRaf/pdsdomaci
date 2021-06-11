@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+	metadata:
+		name: test-job
+	spec:
+		template:
+			metadata:
+				name: test-job
+			spec:
+				container:
+				- name: test-job
+				  image: python
+				command:
+				- python
+				- podaci.py
+				restartPolicy: OnFailure

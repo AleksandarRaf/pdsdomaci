@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Pod
+metadata:
+	name: website
+	labels:
+		name: website
+	spec:
+		containers:
+		   - name: website
+		     image: nginx
+		     ports:
+			-name: websiteport
+			 containerPort: 80
+			 protocol: TCP
+			-name: websiteport2
+			 containerPort: 443
+			 protocol: TCP
+
